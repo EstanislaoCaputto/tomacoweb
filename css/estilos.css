@@ -1,0 +1,492 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+body {
+  position: relative;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9bc361), to(#729c34));
+  background-image: linear-gradient(to top, #9bc361, #729c34);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 3fr auto;
+      grid-template-rows: auto 3fr auto;
+      grid-template-areas: "head" "body" "footer";
+  gap: 0px;
+}
+
+.navegacion {
+  display: -ms-grid;
+  display: grid;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 95%;
+  padding: 5px;
+  z-index: 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  -webkit-transform: all 9s ease;
+          transform: all 9s ease;
+}
+
+.navegacion ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.navegacion ul a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navegacion ul a:hover {
+  -webkit-transform: scale(1, 2);
+          transform: scale(1, 2);
+  font-size: 40px;
+}
+
+.navegacion ul a:visited {
+  color: orangered;
+}
+
+.navegacion ul a:link {
+  color: orangered;
+}
+
+.navegacion ul a:active {
+  color: orangered;
+}
+
+#cabeza {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 40px 60px 30px;
+      grid-template-rows: auto 40px 60px 30px;
+      grid-template-areas: "logo" "nav" "h1" "h2";
+  grid-gap: 10px;
+  justify-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  z-index: 2;
+}
+
+.logo:hover {
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: rotate(-45deg) scale(2, 1) scale(1, 2);
+          transform: rotate(-45deg) scale(2, 1) scale(1, 2);
+}
+
+h1 {
+  font-size: 45px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: h1;
+}
+
+h2 {
+  text-decoration: underline;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: h2;
+}
+
+#pie {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+/*----------------Seccion Index-------------*/
+.accordion {
+  margin-top: 15px;
+}
+
+.logo1 {
+  height: 300px;
+  width: 300px;
+  padding: 0px;
+  border: 2px outset black;
+}
+
+/*----------------seccion Contactanos------------*/
+#cuerpo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: "p1" "img";
+  grid-gap: 2px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: body;
+}
+
+.nomb, .nomb__mail {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FF8724;
+  height: 30px;
+  width: 80px;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.nomb:focus, .nomb__mail:focus {
+  width: 200px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.nomb__mail:focus {
+  width: 350px;
+  font-size: 20px;
+}
+
+textarea {
+  background-color: #FF8724;
+}
+
+.krusty {
+  width: 280px;
+  height: 400px;
+}
+
+.boton {
+  background-color: #9bc361;
+  -webkit-text-decoration-color: orangered;
+          text-decoration-color: orangered;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+
+/*-------------Seccion Productos--------------*/
+#cuerpoProd {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20px auto;
+      grid-template-rows: 20px auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 5px;
+      grid-template-areas: "titulo" "primerCol" "segundaCol" "tercerCol";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: body;
+}
+
+.tituPrecio {
+  font-size: 4vh;
+  color: red;
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+.losProduc {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  gap: 5px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: primerCol;
+}
+
+.imgProduc img {
+  width: 300px;
+  height: 300px;
+}
+
+/*--------------Seccion Encargos-------------*/
+.formulario {
+  text-align: center;
+  padding: 20px 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*----------------Seccion Medios-de-pago----------------*/
+.pagar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.imgPag {
+  width: 200px;
+  height: 150px;
+}
+
+/*-------------Seccion Promos------------*/
+.carousel {
+  margin: 10px 20px;
+  padding: 0%;
+}
+
+.size img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 700px;
+  width: 100px;
+  margin: 10px 30px 10px 30px;
+  padding: 0px;
+}
+
+/*-------------Media Querys-----------*/
+@media screen and (max-width: 320px) {
+  .navegacion {
+    width: 90%;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .navegacion ul {
+    padding: 1px;
+  }
+  .navegacion ul a {
+    font-size: 10px;
+  }
+  .navegacion ul a:hover {
+    -webkit-transform: none;
+            transform: none;
+    font-size: 10px;
+  }
+  .formularioDeEncargos {
+    width: 80%;
+    text-align: center;
+    padding: 2px 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .losProduc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  ol img {
+    width: 50px;
+    height: 50px;
+  }
+  .pagar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .imgPag {
+    width: 100px;
+    height: 50px;
+  }
+  .krusty {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navegacion {
+    width: 90%;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .navegacion ul {
+    padding: 1px;
+  }
+  .navegacion ul a {
+    font-size: 10px;
+  }
+  .navegacion ul a:hover {
+    -webkit-transform: none;
+            transform: none;
+    font-size: 10px;
+  }
+  .formularioDeEncargos {
+    width: 80%;
+    text-align: center;
+    padding: 2px 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .losProduc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  ol img {
+    width: 70px;
+    height: 70px;
+  }
+  .pagar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .imgPag {
+    width: 150px;
+    height: 100px;
+  }
+  .krusty {
+    width: 100px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navegacion {
+    width: 90%;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .navegacion ul {
+    padding: 1px;
+  }
+  .navegacion ul a {
+    font-size: 10px;
+  }
+  .navegacion ul a:hover {
+    -webkit-transform: none;
+            transform: none;
+    font-size: 10px;
+  }
+  .formularioDeEncargos {
+    width: 80%;
+    text-align: center;
+    padding: 2px 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .losProduc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 4px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  .imgProduc img {
+    width: 150px;
+    height: 150px;
+  }
+  .pagar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .imgPag {
+    width: 150px;
+    height: 100px;
+  }
+  .krusty {
+    width: 200px;
+    height: 300px;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,8 @@
+body {
+    position: relative;
+    background-image: linear-gradient(to top, #9bc361, #729c34);
+    display: grid;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas: "head" "body" "footer";
+    gap: 0px;
+}
