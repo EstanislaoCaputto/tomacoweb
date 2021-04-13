@@ -237,13 +237,14 @@ textarea {
 
 .carousel {
     margin: 10px 20px;
-    padding: 0%;
+    padding: 20px;
+    transition: 1s;
 }
 
 .size img {
     display: flex;
-    height: 700px;
-    width: 100px;
+    height: 500px;
+    width: 1130px;
     margin: 10px 30px 10px 30px;
     padding: 0px;
 }

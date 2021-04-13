@@ -120,6 +120,14 @@ h2 {
   grid-area: footer;
 }
 
+#pie .btn {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 33px;
+  margin-left: 50px;
+}
+
 /*----------------Seccion Index-------------*/
 .accordion {
   background-color: #729c34;
@@ -316,15 +324,17 @@ textarea {
 /*-------------Seccion Promos------------*/
 .carousel {
   margin: 10px 20px;
-  padding: 0%;
+  padding: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .size img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 700px;
-  width: 100px;
+  height: 500px;
+  width: 1130px;
   margin: 10px 30px 10px 30px;
   padding: 0px;
 }
