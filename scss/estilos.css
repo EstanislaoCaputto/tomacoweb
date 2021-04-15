@@ -112,6 +112,11 @@ h2 {
 }
 
 #pie {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px auto 200px;
+      grid-template-columns: 200px auto 200px;
+      grid-template-areas: "celular pie redes";
   margin-top: 60px;
   text-align: center;
   font-size: 14px;
@@ -120,12 +125,42 @@ h2 {
   grid-area: footer;
 }
 
-#pie .btn {
-  display: block;
-  width: 45px;
-  height: 45px;
-  margin-bottom: 33px;
-  margin-left: 50px;
+#pie .boton-redes {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: redes;
+}
+
+#pie .boton-redes img {
+  width: 50px;
+  height: 50px;
+  margin-right: 40%;
+  margin-bottom: 33%;
+}
+
+#pie .boton-cel {
+  text-decoration: none;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: celular;
+}
+
+#pie .boton-cel img {
+  width: 50px;
+  height: 50px;
+  margin-right: 40%;
+  margin-bottom: 33%;
+}
+
+#pie .derechos {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: pie;
 }
 
 /*----------------Seccion Index-------------*/
