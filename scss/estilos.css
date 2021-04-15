@@ -114,8 +114,8 @@ h2 {
 #pie {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px auto 200px;
-      grid-template-columns: 200px auto 200px;
+  -ms-grid-columns: 400px auto 400px;
+      grid-template-columns: 400px auto 400px;
       grid-template-areas: "celular pie redes";
   margin-top: 60px;
   text-align: center;
@@ -131,7 +131,8 @@ h2 {
   grid-area: redes;
 }
 
-#pie .boton-redes img {
+#pie .boton-redes a {
+  text-decoration: none;
   width: 50px;
   height: 50px;
   margin-right: 40%;
