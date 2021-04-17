@@ -118,6 +118,8 @@ h2 {
       grid-template-columns: 400px auto 400px;
       grid-template-areas: "celular pie redes";
   margin-top: 60px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
   font-size: 14px;
   -ms-grid-row: 3;
@@ -132,6 +134,8 @@ h2 {
 }
 
 #pie .boton-redes a {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-decoration: none;
   width: 50px;
   height: 50px;
@@ -140,16 +144,25 @@ h2 {
 }
 
 #pie .boton-cel {
-  text-decoration: none;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: celular;
 }
 
-#pie .boton-cel img {
-  width: 50px;
-  height: 50px;
+#pie .boton-cel a {
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
   margin-right: 40%;
   margin-bottom: 33%;
 }
