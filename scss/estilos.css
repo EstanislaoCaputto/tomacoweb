@@ -1,7 +1,9 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   font-family: 'Sansita Swashed', cursive;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -128,19 +130,24 @@ h2 {
 }
 
 #pie .boton-redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: redes;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #pie .boton-redes a {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   text-decoration: none;
-  width: 50px;
-  height: 50px;
-  margin-right: 40%;
-  margin-bottom: 33%;
+  padding-left: 25px;
+  margin-bottom: 33px;
 }
 
 #pie .boton-cel {
@@ -163,8 +170,8 @@ h2 {
   text-decoration: none;
   text-align: center;
   width: 100px;
-  margin-right: 40%;
-  margin-bottom: 33%;
+  margin-right: 100px;
+  margin-bottom: 80px;
 }
 
 #pie .derechos {
