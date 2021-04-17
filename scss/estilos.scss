@@ -118,13 +118,20 @@ h2 {
 
 #cuerpo {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "p1" "img";
-    grid-gap: 2px;
-    justify-content: space-between;
+    grid-template-columns: 300px 400px;
+    grid-template-areas: "p1 img";
+    grid-gap: 10px;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
     grid-area: body;
+}
+
+.cuerpo--form {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-area: p1;
+
 }
 
 .nomb {
@@ -133,6 +140,9 @@ h2 {
     height: 30px;
     width: 80px;
     transition: all 5s;
+    
+    margin: 20px;
+    padding: 10px;
     &:focus {
         width: 200px;
         padding: 5px;
@@ -155,6 +165,7 @@ textarea {
 .krusty {
     width: 280px;
     height: 400px;
+    grid-area: img;
 }
 
 .boton {
@@ -232,12 +243,21 @@ textarea {
 
 /*--------------Seccion Encargos-------------*/
 
+.titu-encargos {
+    text-align:center ;
+    font-size: 20px;
+    color: red;
+}
+
 .formulario {
     text-align: center;
+    width: 300px;
+    margin: 80px 200px;
     padding: 20px 200px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 
