@@ -245,10 +245,10 @@ h2 {
           justify-content: center;
   background-color: #FF8724;
   height: 30px;
-  width: 80px;
+  width: 100px;
   -webkit-transition: all 5s;
   transition: all 5s;
-  margin: 20px;
+  margin: 20px 100px 20px 10px;
   padding: 10px;
 }
 
@@ -356,29 +356,33 @@ textarea {
 }
 
 /*--------------Seccion Encargos-------------*/
-.titu-encargos {
-  text-align: center;
-  font-size: 20px;
-  color: red;
-}
-
 .formulario {
-  text-align: center;
-  width: 300px;
-  margin: 80px 200px;
-  padding: 20px 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px 400px;
+}
+
+.formulario .nomb, .formulario .nomb__mail {
+  width: 200px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.formulario .nomb__mail {
+  width: 300px;
+  -webkit-transition: none;
+  transition: none;
 }
 
 /*----------------Seccion Medios-de-pago----------------*/
@@ -416,10 +420,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
-  width: 1130px;
+  height: 450px;
+  width: 930px;
   margin: 10px 30px 10px 30px;
-  padding: 0px;
+  padding: 10px;
 }
 
 /*----------Error 404---------------*/
@@ -481,12 +485,22 @@ textarea {
     font-size: 10px;
   }
   .formulario {
-    width: 80%;
     text-align: center;
-    padding: 2px 5px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 200px;
+    margin: 60px 100px;
+    padding: 20px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   #Productos {
     display: -ms-grid;
@@ -499,8 +513,8 @@ textarea {
     text-align: center;
   }
   .Productos--imagenes img {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
   }
   .pagar {
     display: -ms-grid;
@@ -520,7 +534,24 @@ textarea {
   }
   .imgPag {
     width: 100px;
-    height: 50px;
+    height: 100px;
+  }
+  #cuerpo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "p1";
+    grid-gap: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: body;
   }
   .krusty {
     display: none;
@@ -545,12 +576,22 @@ textarea {
     font-size: 10px;
   }
   .formulario {
-    width: 80%;
     text-align: center;
-    padding: 2px 5px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 300px;
+    margin: 80px 100px;
+    padding: 20px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   #Productos {
     display: -ms-grid;
@@ -563,8 +604,8 @@ textarea {
     text-align: center;
   }
   .Productos--imagenes img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
   }
   .pagar {
     display: -ms-grid;
@@ -586,9 +627,26 @@ textarea {
     width: 150px;
     height: 100px;
   }
+  #cuerpo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 300px 300px;
+        grid-template-columns: 300px 300px;
+        grid-template-areas: "p1 img";
+    grid-gap: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: body;
+  }
   .krusty {
-    width: 100px;
-    height: 200px;
+    width: 150px;
+    height: 250px;
   }
 }
 
@@ -610,12 +668,22 @@ textarea {
     font-size: 10px;
   }
   .formulario {
-    width: 80%;
     text-align: center;
-    padding: 2px 5px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 300px;
+    margin: 80px 100px;
+    padding: 20px 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   #Productos {
     display: -ms-grid;
@@ -628,8 +696,8 @@ textarea {
     text-align: center;
   }
   .Productos--imagenes img {
-    width: 50px;
-    height: 50px;
+    width: 250px;
+    height: 250px;
   }
   .pagar {
     display: -ms-grid;
