@@ -246,19 +246,19 @@ textarea {
 
 
 
-form {
+.encargo--form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     margin-top: 50px;
     .nomb {
-        align-self: center;
+        justify-content: center;
         width: 200px;
         transition: none;
     }
     .nomb__mail {
-        align-self: center;
+        justify-content: center;
         width: 300px;
         transition: none;
     }

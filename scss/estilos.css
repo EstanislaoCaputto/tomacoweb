@@ -356,7 +356,7 @@ textarea {
 }
 
 /*--------------Seccion Encargos-------------*/
-form {
+.encargo--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,28 +364,25 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
 }
 
-form .nomb, form .nomb__mail {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.encargo--form .nomb, .encargo--form .nomb__mail {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 200px;
   -webkit-transition: none;
   transition: none;
 }
 
-form .nomb__mail {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.encargo--form .nomb__mail {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 300px;
   -webkit-transition: none;
   transition: none;
