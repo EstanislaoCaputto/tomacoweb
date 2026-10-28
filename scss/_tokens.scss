@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Tokens · Tomacco
+   Paleta tabacalera vintage: verde bosque, ámbar, papel crema y tinta.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../assets/fonts/dm-sans.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  /* Color */
+  --t-bg: #11130d;
+  --t-bg-deep: #0b0d08;
+  --t-surface: #191d13;
+  --t-surface-2: #21271a;
+  --t-surface-3: #2b3223;
+  --t-cream: #f3ead7;
+  --t-cream-soft: #ded3bd;
+  --t-muted: #a6a58e;
+  --t-amber: #e0a23b;
+  --t-amber-soft: #f4c46a;
+  --t-olive: #8aa35a;
+  --t-olive-deep: #5f7a3c;
+  --t-rust: #c4653f;
+  --t-danger: #e08a6a;
+  --t-line: rgba(243, 234, 215, 0.14);
+  --t-line-strong: rgba(243, 234, 215, 0.28);
+  --t-ink: #1a1408;
+
+  /* Tipografía */
+  --t-font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --t-font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+
+  /* Forma y movimiento */
+  --t-radius: 20px;
+  --t-radius-sm: 13px;
+  --t-radius-lg: 30px;
+  --t-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+  --t-shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.28);
+  --t-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-header: 78px;
+  --t-max: 1200px;
+
+  /* Puente con Bootstrap */
+  --bs-body-bg: var(--t-bg);
+  --bs-body-color: var(--t-cream);
+  --bs-body-font-family: var(--t-font-body);
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.65;
+  --bs-heading-font-family: var(--t-font-display);
+  --bs-primary: var(--t-amber);
+  --bs-primary-rgb: 224, 162, 59;
+  --bs-link-color: var(--t-amber-soft);
+  --bs-link-hover-color: var(--t-cream);
+  --bs-border-color: var(--t-line);
+  --bs-border-color-translucent: var(--t-line);
+  --bs-secondary-color: var(--t-muted);
+  --bs-emphasis-color: var(--t-cream);
+  --bs-body-bg-rgb: 17, 19, 13;
+  --bs-body-color-rgb: 243, 234, 215;
+  --bs-tertiary-bg: var(--t-surface);
+  --bs-secondary-bg: var(--t-surface-2);
+  --bs-border-radius: var(--t-radius-sm);
+  --bs-border-radius-lg: var(--t-radius);
+  --bs-focus-ring-color: rgba(224, 162, 59, 0.28);
+}

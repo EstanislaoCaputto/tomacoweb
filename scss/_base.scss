@@ -1,0 +1,331 @@
+/* ==========================================================================
+   Base · reset suave, tipografía editorial y utilidades
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--t-header) + 24px);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--t-bg);
+  background-image:
+    radial-gradient(62rem 42rem at 8% -10%, rgba(224, 162, 59, 0.13), transparent 62%),
+    radial-gradient(52rem 38rem at 104% 2%, rgba(122, 153, 80, 0.12), transparent 58%),
+    linear-gradient(180deg, #11130d 0%, #0d0f0a 100%);
+  background-attachment: fixed;
+  color: var(--t-cream);
+  font-family: var(--t-font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.6em;
+  color: var(--t-cream);
+  font-family: var(--t-font-display);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: var(--t-amber-soft);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--t-cream);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--t-amber);
+  color: var(--t-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--t-amber);
+  outline-offset: 3px;
+}
+
+/* Accesibilidad ----------------------------------------------------------- */
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 11000;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--t-amber);
+  color: var(--t-ink);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: var(--t-ink);
+}
+
+/* Estructura ------------------------------------------------------------- */
+
+.container {
+  --bs-gutter-x: 2rem;
+  width: 100%;
+  max-width: var(--t-max);
+  margin-inline: auto;
+  padding-inline: calc(var(--bs-gutter-x) * 0.5);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.section--tight {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section--line {
+  border-top: 1px solid var(--t-line);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(1.8rem, 4vw, 3rem);
+}
+
+.section-head__copy {
+  max-width: 640px;
+}
+
+.section-head .lead {
+  margin-bottom: 0;
+}
+
+/* Tipografía ------------------------------------------------------------- */
+
+.display-title {
+  margin: 0;
+  font-family: var(--t-font-display);
+  font-size: clamp(3.4rem, 8.4vw, 7.2rem);
+  font-weight: 400;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.display-title em {
+  color: var(--t-amber-soft);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.section-title {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  font-weight: 400;
+}
+
+.section-title em {
+  color: var(--t-amber-soft);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.lead {
+  max-width: 62ch;
+  margin-bottom: 1.5rem;
+  color: var(--t-cream-soft);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.75;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  color: var(--t-amber);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 0.25rem rgba(224, 162, 59, 0.12);
+}
+
+.text-muted {
+  color: var(--t-muted) !important;
+}
+
+.text-amber {
+  color: var(--t-amber-soft);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.measure {
+  max-width: 58ch;
+}
+
+/* Superficies ------------------------------------------------------------ */
+
+.surface {
+  border: 1px solid var(--t-line);
+  border-radius: var(--t-radius);
+  background:
+    linear-gradient(145deg, rgba(243, 234, 215, 0.045), transparent 45%),
+    var(--t-surface);
+}
+
+.surface--deep {
+  background: var(--t-bg-deep);
+}
+
+.hairline {
+  height: 1px;
+  border: 0;
+  background: var(--t-line);
+  opacity: 1;
+}
+
+.badge-soft {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.65rem;
+  border: 1px solid rgba(224, 162, 59, 0.35);
+  border-radius: 999px;
+  background: rgba(224, 162, 59, 0.1);
+  color: var(--t-amber-soft);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.badge-soft--olive {
+  border-color: rgba(138, 163, 90, 0.4);
+  background: rgba(138, 163, 90, 0.12);
+  color: #c0d49a;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--t-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Revelado al scrollear (solo si JS está activo) -------------------------- */
+
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s var(--t-ease),
+    transform 0.7s var(--t-ease);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Movimiento reducido ---------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
