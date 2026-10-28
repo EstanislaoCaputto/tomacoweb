@@ -1,100 +1,342 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Promociones varias y combos imperdibles">
-    <meta name="keywords" content="Promociones, Combo Regalo, Descuentos">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomacco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logo.jpg" type="image/jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="scss/estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promos y combos · Tomacco</title>
+  <meta name="description" content="Combos de tabacos, cedas y filtros con precio especial. Promos de Tomacco en Córdoba.">
+  <meta name="theme-color" content="#11130d">
+  <meta property="og:title" content="Promos y combos · Tomacco">
+  <meta property="og:description" content="Combos de tabacos, cedas y filtros con precio especial. Promos de Tomacco en Córdoba.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/promo1.jpeg">
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg">
+  <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body>
-    <header id="cabeza">
-        <a href="index.html"><img src="img/logo.jpg" alt="Nuestro Logo" class="logo"></a>
-        <nav class="navegacion">
-            <ul>
-                <li><a href="Contactanos.html">Contactanos</a></li>
-                <li><a href="Productos.html">Productos</a></li>
-                <li><a href="Promos.html">Promos</a></li>
-                <li><a href="Encargos.html">Encargos</a></li>
-                <li><a href="Medios-de-pago.html">Medios de Pago</a></li>
-            </ul>
-        </nav>
+<body data-page="promos">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <noscript>
+    <div class="file-warning">Esta demo usa JavaScript para el carrito y los filtros. El contenido principal sigue disponible.</div>
+  </noscript>
 
-        <h1>--Tomacco--</h1>
-        <h2>Tabacos y más</h2>
-    </header>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p><span class="topbar__pulse" aria-hidden="true"></span> Envíos a domicilio en Córdoba capital</p>
+      <p class="topbar__note">Demo educativa · Solo +18</p>
+    </div>
+  </div>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active size">
-                <img src="img/promo1.jpeg" class="d-block w-100" alt="precentacion-promos">
-            </div>
-            <div class="carousel-item size">
-                <img src="img/promo2.jpeg" class="d-block w-100" alt="Las-hojas-3x550">
-            </div>
-            <div class="carousel-item size">
-                <img src="img/promo3.jpeg" class="d-block w-100 h-90" alt="van-hans-2x520">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand site-brand" href="index.html" aria-label="Tomacco, volver al inicio">
+          <img class="site-brand__logo" src="img/logo.jpg" alt="" width="46" height="46">
+          <span class="site-brand__text">
+            <span class="site-brand__name">Tomacco</span>
+            <span class="site-brand__tag">Tabacos y más</span>
+          </span>
+        </a>
+        <button class="navbar-toggler site-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" aria-controls="navPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="site-toggler__bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="collapse navbar-collapse" id="navPrincipal">
+          <ul class="navbar-nav site-menu ms-auto">
+            <li class="nav-item"><a class="nav-link" href="Productos.html">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="Promos.html">Promos</a></li>
+            <li class="nav-item"><a class="nav-link" href="Encargos.html">Encargos</a></li>
+            <li class="nav-item"><a class="nav-link" href="Medios-de-pago.html">Medios de pago</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contactanos.html">Contacto</a></li>
+          </ul>
+          <div class="site-actions">
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/543516368448" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg>
+              WhatsApp
+            </a>
+            <button class="cart-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#carritoPanel" aria-controls="carritoPanel">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+              <span class="cart-toggle__label">Carrito</span>
+              <span class="cart-count" data-cart-count hidden>0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main id="contenido">
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="Miga de pan">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Promos</li>
+      </ol>
+    </nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Promos</p>
+        <h1>Combos para <em>armar mejor.</em></h1>
+        <p>Tres formas de comprar un poco mejor: más producto, menos vueltas y un precio que cierra. Sumalos al carrito o coordinamos por WhatsApp.</p>
+      </div>
+      <p class="text-muted small mb-0">Promos de demo · Consultá stock y disponibilidad</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div id="promoCarousel" class="carousel slide promo-carousel" data-bs-ride="carousel" data-bs-interval="6500" data-bs-pause="hover" aria-label="Promociones de Tomacco">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Promo 1: Las Hojas"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Promo 2: Van Häasen"></button>
+        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Promo 3: Combo Armado"></button>
+      </div>
+      <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <div class="promo-slide">
+        <div class="promo-slide__media">
+          <img src="img/promo2.jpeg" alt="Tres paquetes de Las Hojas por $550" width="1080" height="1080">
+        </div>
+        <div class="promo-slide__body">
+          <span class="badge-soft">Ahorrás $50</span>
+          <h2>Las Hojas,<br>de a tres.</h2>
+          <p>Tres paquetes de 30 g del tabaco rubio más parejo de la selección. Ideal para tener stock sin pensar en la próxima compra.</p>
+          <p class="price promo-slide__price">$550 <span class="price--old">$600</span></p>
+          <button class="btn btn-amber" type="button" data-add-to-cart="combo-las-hojas" data-cantidad="1">Agregar combo</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="promo-slide">
+        <div class="promo-slide__media">
+          <img src="img/promo3.jpeg" alt="Dos paquetes de Van Häasen por $520" width="1080" height="1080" loading="lazy">
+        </div>
+        <div class="promo-slide__body">
+          <span class="badge-soft">Ahorrás $80</span>
+          <h2>Van Häasen,<br>de a dos.</h2>
+          <p>Dos paquetes de 30 g, combinables entre Natural y Nativo. Un blend más refinado para darte el gusto.</p>
+          <p class="price promo-slide__price">$520 <span class="price--old">$600</span></p>
+          <button class="btn btn-amber" type="button" data-add-to-cart="combo-van-haasen" data-cantidad="1">Agregar combo</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="promo-slide">
+        <div class="promo-slide__media">
+          <img src="img/promo1.jpeg" alt="Combo Armado con tabaco, sedas y filtros" width="1080" height="1080" loading="lazy">
+        </div>
+        <div class="promo-slide__body">
+          <span class="badge-soft">Combo iniciación</span>
+          <h2>Todo para<br>arrancar.</h2>
+          <p>Cuatro Leguas, Sedas OCB y Filtros OCB Regulares. El combo justo para armar sin comprar de más.</p>
+          <p class="price promo-slide__price">$380 <span class="price--old">$430</span></p>
+          <button class="btn btn-amber" type="button" data-add-to-cart="combo-armado" data-cantidad="1">Agregar combo</button>
+        </div>
+      </div>
     </div>
 
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Promo anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Promo siguiente</span>
+      </button>
+    </div>
+    <p class="text-muted small mt-3 mb-0">Las promos se suman al mismo carrito que los productos sueltos. El envío se coordina aparte.</p>
+  </div>
+</section>
 
-    <section id="pie"> 
-        <div class= "boton-redes">
-            <a href="https://www.facebook.com/Tomaco-Tabacos-y-mas-100153065129521/">facebook
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                </svg>
+<section class="section section--line">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="section-head__copy">
+        <p class="eyebrow">Todos los combos</p>
+        <h2 class="section-title">Elegí el tuyo <em>y listo.</em></h2>
+      </div>
+      <p class="text-muted measure mb-0">Si querés armar un combo distinto, escribinos: armamos algo a medida con lo que hay en stock.</p>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <article class="promo-card">
+          <div class="promo-card__media">
+            <img src="img/promo2.jpeg" alt="Promo de tres paquetes de Las Hojas" width="1080" height="1080" loading="lazy">
+            <span class="promo-card__saving">Ahorrás $50</span>
+          </div>
+          <div class="promo-card__body">
+            <p class="tag">Combo · Tabaco</p>
+            <h3>Las Hojas × 3</h3>
+            <p>Tres paquetes de 30 g para tener tabaco para rato.</p>
+            <ul class="promo-card__list">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> 3 × Las Hojas 30 g</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Ahorrás $50</li>
+            </ul>
+            <div class="promo-card__footer">
+              <span class="price">$550 <span class="price--old">$600</span></span>
+              <button class="add-btn" type="button" data-add-to-cart="combo-las-hojas" data-cantidad="1" aria-label="Agregar Combo Las Hojas al carrito">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                <span class="add-btn__label">Agregar</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="promo-card">
+          <div class="promo-card__media">
+            <img src="img/promo3.jpeg" alt="Promo de dos paquetes de Van Häasen" width="1080" height="1080" loading="lazy">
+            <span class="promo-card__saving">Ahorrás $80</span>
+          </div>
+          <div class="promo-card__body">
+            <p class="tag">Combo · Tabaco</p>
+            <h3>Van Häasen × 2</h3>
+            <p>Dos paquetes de 30 g, combinables entre Natural y Nativo.</p>
+            <ul class="promo-card__list">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> 2 × Van Häasen 30 g</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Ahorrás $80</li>
+            </ul>
+            <div class="promo-card__footer">
+              <span class="price">$520 <span class="price--old">$600</span></span>
+              <button class="add-btn" type="button" data-add-to-cart="combo-van-haasen" data-cantidad="1" aria-label="Agregar Combo Van Häasen al carrito">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                <span class="add-btn__label">Agregar</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article class="promo-card">
+          <div class="promo-card__media">
+            <img src="img/promo1.jpeg" alt="Combo de tabaco, sedas y filtros" width="1080" height="1080" loading="lazy">
+            <span class="promo-card__saving">Combo iniciación</span>
+          </div>
+          <div class="promo-card__body">
+            <p class="tag">Combo · Armado</p>
+            <h3>Combo Armado</h3>
+            <p>Tabaco, sedas y filtros: todo lo necesario para arrancar.</p>
+            <ul class="promo-card__list">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> 1 × Cuatro Leguas</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> 1 × Sedas OCB + filtros</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Ahorrás $50</li>
+            </ul>
+            <div class="promo-card__footer">
+              <span class="price">$380 <span class="price--old">$430</span></span>
+              <button class="add-btn" type="button" data-add-to-cart="combo-armado" data-cantidad="1" aria-label="Agregar Combo Armado al carrito">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                <span class="add-btn__label">Agregar</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta" data-reveal>
+      <p class="eyebrow">¿Te quedó una duda?</p>
+      <h2>La promo se coordina por WhatsApp.</h2>
+      <p>Contanos qué combo te interesa y tu zona. Te confirmamos disponibilidad, total y envío antes de cerrar.</p>
+      <div class="cta__actions">
+        <a class="btn btn-amber btn-lg" href="Encargos.html">Armar un encargo</a>
+        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/543516368448" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container site-footer__main">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <img class="footer-brand__logo" src="img/logo.jpg" alt="" width="44" height="44">
+            <span>
+              <span class="footer-brand__name">Tomacco</span>
+              <span class="footer-brand__tag">Tabacos y más</span>
+            </span>
+          </a>
+          <p class="footer-copy">Tabacos, cedas y filtros seleccionados. Pedidos simples, precios claros y envíos en Córdoba capital.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/Tomaco-Tabacos-y-mas-100153065129521/" target="_blank" rel="noopener noreferrer" aria-label="Tomacco en Facebook">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v5h4v-5h3l1-4h-4V8Z"/></svg>
             </a>
-            <a href="https://www.instagram.com/tomacotabacosymas/">instagram
-                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" color="" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                  </svg>
+            <a href="https://www.instagram.com/tomacotabacosymas/" target="_blank" rel="noopener noreferrer" aria-label="Tomacco en Instagram">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>
             </a>
-            
+            <a href="https://wa.me/543516368448" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Tomacco por WhatsApp">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg>
+            </a>
+          </div>
         </div>
-
-        <div class="boton-cel"> 
-            <a href="https://wa.me/543516368448">Tano
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-whatsapp text-success" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                  </svg>
-            </a>
-            <a href="https://wa.me/543517500261">Coco
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" role="img" fill="currentColor" class="bi bi-whatsapp text-success" viewBox="0 0 16 16">
-                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                  </svg>
-            </a>
-            
+        <div class="col-6 col-lg-2">
+          <h2 class="footer-title">Explorar</h2>
+          <ul class="footer-links">
+            <li><a href="Productos.html">Productos</a></li>
+            <li><a href="Promos.html">Promos</a></li>
+            <li><a href="Encargos.html">Encargos</a></li>
+            <li><a href="Medios-de-pago.html">Medios de pago</a></li>
+          </ul>
         </div>
-        <div>
-            <footer class="derechos">Creado por Estanislao para coderhouse</footer>
+        <div class="col-6 col-lg-2">
+          <h2 class="footer-title">Ayuda</h2>
+          <ul class="footer-links">
+            <li><a href="Contactanos.html">Contacto</a></li>
+            <li><a href="Contactanos.html#faq">Preguntas frecuentes</a></li>
+            <li><a href="Medios-de-pago.html#faq">Cómo pagar</a></li>
+            <li><a href="Encargos.html">Hacer un pedido</a></li>
+          </ul>
         </div>
-    </section>
+        <div class="col-lg-4">
+          <h2 class="footer-title">Hablemos</h2>
+          <ul class="footer-contact">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg>
+              <a href="https://wa.me/543516368448" target="_blank" rel="noopener noreferrer">Tano · +54 351 636-8448</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg>
+              <a href="https://wa.me/543517500261" target="_blank" rel="noopener noreferrer">Coco · +54 351 750-0261</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Córdoba capital, Argentina
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Pedidos y consultas por WhatsApp
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> <strong>Tomacco</strong> · Demo educativa de Estanislao para Coderhouse.</p>
+        <p class="footer-warning">+18 · Fumar es perjudicial para la salud.</p>
+      </div>
+    </div>
+  </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+  <script src="js/file-warning.js" defer></script>
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,18 @@
+{
+  "name": "tomacoweb",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Demo educativa de Tomacco, tabacos y más. HTML, CSS y JavaScript vanilla con Bootstrap restilizado.",
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "start": "npm run dev",
+    "build:css": "sass scss/estilos.scss css/estilos.css --style=expanded --no-source-map",
+    "watch:css": "sass --watch scss/estilos.scss css/estilos.css --style=expanded --no-source-map",
+    "test": "node --test tests/",
+    "test:watch": "node --test --watch tests/"
+  },
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}
